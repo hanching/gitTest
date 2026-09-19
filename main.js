@@ -7,11 +7,13 @@ function showPage(pageId) {
 }
 // 顯示教室位置與走法
 function showLocation(course, room, route) {
+    if (!course || !room) return;
     document.getElementById('modalCourse').innerText = course;
     document.getElementById('modalRoom').innerText = room;
     document.getElementById('modalRoute').innerText = route;
     document.getElementById('locationModal').style.display = 'flex';
 }
+
 
 // 關閉視窗
 function closeModal() {

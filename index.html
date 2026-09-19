@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>班級管理系統載入中...</h1>
     <!-- 右上角導航列 -->
 <nav>
     <div><strong>班級管理系統</strong></div>
@@ -20,28 +19,126 @@
 </nav>
 
 <!-- 頁面容器 (預設顯示課表 active-page) -->
-<div id="schedule" class="page active-page"><h2>週課表 (上課45分鐘 / 下課15分鐘)</h2>
-<p style="font-size: 14px; color: #666; margin-top: 5px;">點擊課程可觀看教室位置與路線說明</p>
-<table>
-    <thead>
-        <tr>
-            <th>時間</th>
-            <th>節次</th>
-            <th>週一</th>
-            <th>週二</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td class="time-col">08:15 - 09:00</td>
-            <td>第一節</td>
-            <td class="course-cell" onclick="showLocation('國文', '101 教室', '從班級門口直走，右轉第一間。')">國文</td>
-            <td class="course-cell" onclick="showLocation('數學', '101 教室', '從班級門口直走，右轉第一間。')">數學</td>
-        </tr>
-    </tbody>
-</table>
+<!-- 完整週課表區塊 -->
+<div id="schedule" class="page active-page">
+    <h2>週課表 (上課45分鐘 / 下課15分鐘)</h2>
+    <p style="font-size: 14px; color: #666; margin-top: 5px;">點擊課程可觀看教室位置與路線說明</p>
+    <table>
+        <thead>
+            <tr>
+                <th>時間</th>
+                <th>節次</th>
+                <th>週一</th>
+                <th>週二</th>
+                <th>週三</th>
+                <th>週四</th>
+                <th>週五</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="time-col">08:15 - 09:00</td>
+                <td>第一節</td>
+                <td class="course-cell" onclick="showLocation('國文', '101 教室', '從班級門口直走，右轉第一間。')">國文</td>
+                <td class="course-cell" onclick="showLocation('數學', '101 教室', '從班級門口直走，右轉第一間。')">數學</td>
+                <td class="course-cell" onclick="showLocation('英文', '105 語文教室', '搭乘東側電梯至 1 樓右側門口。')">英文</td>
+                <td class="course-cell" onclick="showLocation('物理', '301 理化教室', '走西側樓梯上至 3 樓右轉。')">物理</td>
+                <td class="course-cell" onclick="showLocation('歷史', '101 教室', '從班級門口直走，右轉第一間。')">歷史</td>
+            </tr>
+            <tr>
+                <td class="time-col">09:15 - 10:00</td>
+                <td>第二節</td>
+                <td class="course-cell" onclick="showLocation('英文', '105 語文教室', '搭乘東側電梯至 1 樓右側門口。')">英文</td>
+                <td class="course-cell" onclick="showLocation('國文', '101 教室', '從班級門口直走，右轉第一間。')">國文</td>
+                <td class="course-cell" onclick="showLocation('數學', '101 教室', '從班級門口直走，右轉第一間。')">數學</td>
+                <td class="course-cell" onclick="showLocation('化學', '302 化學實驗室', '走西側樓梯上至 3 樓盡頭。')">化學</td>
+                <td class="course-cell" onclick="showLocation('地理', '101 教室', '從班級門口直走，右轉第一間。')">地理</td>
+            </tr>
+            <tr>
+                <td class="time-col">10:15 - 11:00</td>
+                <td>第三節</td>
+                <td class="course-cell" onclick="showLocation('數學', '101 教室', '從班級門口直走，右轉第一間。')">數學</td>
+                <td class="course-cell" onclick="showLocation('體育', '操場', '走中央樓梯下至 1 樓穿過中庭。')">體育</td>
+                <td class="course-cell" onclick="showLocation('生物', '201 生物教室', '走東側樓梯上至 2 樓。')">生物</td>
+                <td class="course-cell" onclick="showLocation('英文', '105 語文教室', '搭乘東側電梯至 1 樓右側門口。')">英文</td>
+                <td class="course-cell" onclick="showLocation('公民', '101 教室', '從班級門口直走，右轉第一間。')">公民</td>
+            </tr>
+            <tr>
+                <td class="time-col">11:15 - 12:00</td>
+                <td>第四節</td>
+                <td class="course-cell" onclick="showLocation('歷史', '101 教室', '從班級門口直走，右轉第一間。')">歷史</td>
+                <td class="course-cell" onclick="showLocation('美術', '401 美術教室', '走中央樓梯上至 4 樓左轉。')">美術</td>
+                <td class="course-cell" onclick="showLocation('地理', '101 教室', '從班級門口直走，右轉第一間。')">地理</td>
+                <td class="course-cell" onclick="showLocation('音樂', '402 音樂教室', '走中央樓梯上至 4 樓右轉。')">音樂</td>
+                <td class="course-cell" onclick="showLocation('健體', '101 教室', '從班級門口直走，右轉第一間。')">健體</td>
+            </tr>
+            <tr class="rest-row">
+                <td class="time-col">12:00 - 13:15</td>
+                <td>-</td>
+                <td colspan="5">午餐與午休時間</td>
+            </tr>
+            <tr>
+                <td class="time-col">13:15 - 14:00</td>
+                <td>第五節</td>
+                <td class="course-cell" onclick="showLocation('體育', '操場', '走中央樓梯下至 1 樓穿過中庭。')">體育</td>
+                <td class="course-cell" onclick="showLocation('電腦', '501 電腦教室', '搭乘中央電梯至 5 樓左轉。')">電腦</td>
+                <td class="course-cell" onclick="showLocation('社團', '各社團據點', '依各社團指定地點前往。')">社團</td>
+                <td class="course-cell" onclick="showLocation('國文', '101 教室', '從班級門口直走，右轉第一間。')">國文</td>
+                <td class="course-cell" onclick="showLocation('家政', '202 家政教室', '走東側樓梯上至 2 樓右轉。')">家政</td>
+            </tr>
+            <tr>
+                <td class="time-col">14:15 - 15:00</td>
+                <td>第六節</td>
+                <td class="course-cell" onclick="showLocation('物理', '301 理化教室', '走西側樓梯上至 3 樓右轉。')">物理</td>
+                <td class="course-cell" onclick="showLocation('電腦', '501 電腦教室', '搭乘中央電梯至 5 樓左轉。')">電腦</td>
+                <td class="course-cell" onclick="showLocation('社團', '各社團據點', '依各社團指定地點前往。')">社團</td>
+                <td class="course-cell" onclick="showLocation('數學', '101 教室', '從班級門口直走，右轉第一間。')">數學</td>
+                <td class="course-cell" onclick="showLocation('童軍', '101 教室', '從班級門口直走，右轉第一間。')">童軍</td>
+            </tr>
+            <tr class="clean-row">
+                <td class="time-col">15:00 - 15:20</td>
+                <td>-</td>
+                <td colspan="5">🧹 打掃時間 (20 分鐘)</td>
+            </tr>
+            <tr>
+                <td class="time-col">15:20 - 16:05</td>
+                <td>第七節</td>
+                <td class="course-cell" onclick="showLocation('班會', '101 教室', '本班教室。')">班會</td>
+                <td class="course-cell" onclick="showLocation('自習', '101 教室', '本班教室。')">自習</td>
+                <td class="course-cell" onclick="showLocation('週會', '禮堂', '走中央樓梯下至 1 樓大禮堂。')">週會</td>
+                <td class="course-cell" onclick="showLocation('自習', '101 教室', '本班教室。')">自習</td>
+                <td class="course-cell" onclick="showLocation('導師時間', '101 教室', '本班教室。')">導師時間</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
-<div id="seating" class="page"><h2>座位表區塊</h2></div>
+
+<!-- 完整座位表區塊 -->
+<div id="seating" class="page">
+    <h2>班級座位表</h2>
+    <div class="card">
+        <div class="stage">講 台</div>
+        <table>
+            <tr><td>1 號</td><td>2 號</td><td>3 號</td><td>4 號</td></tr>
+            <tr><td>5 號</td><td>6 號</td><td>7 號</td><td>8 號</td></tr>
+            <tr><td>9 號</td><td>10 號</td><td>11 號</td><td>12 號</td></tr>
+            <tr><td>13 號</td><td>14 號</td><td>15 號</td><td>16 號</td></tr>
+        </table>
+    </div>
+</div>
+
+<!-- 教室位置彈出視窗 -->
+<div id="locationModal" class="modal">
+    <div class="modal-content">
+        <h3 id="modalCourse">課程名稱</h3>
+        <p><strong>上課地點：</strong><span id="modalRoom"></span></p>
+        <div class="route-info">
+            <strong>🚶 路線走法：</strong>
+            <p id="modalRoute" style="margin-top: 5px;"></p>
+        </div>
+        <button class="close-btn" onclick="closeModal()">關閉</button>
+    </div>
+</div>
 <div id="lottery" class="page"><h2>數字抽籤系統</h2>
 <div class="card">
     <div class="mode-select">
@@ -72,21 +169,9 @@
     </div>
 </div>
 </div>
- 
-<!-- 教室位置彈出視窗 -->
-<div id="locationModal" class="modal">
-    <div class="modal-content">
-        <h3 id="modalCourse">課程名稱</h3>
-        <p><strong>上課地點：</strong><span id="modalRoom"></span></p>
-        <div class="route-info">
-            <strong>🚶 路線走法：</strong>
-            <p id="modalRoute" style="margin-top: 5px;"></p>
-        </div>
-        <button class="close-btn" onclick="closeModal()">關閉</button>
-    </div>
-</div>
-
     <!-- 引入外部 JavaScript 腳本檔 -->
     <script src="main.js"></script>
 </body>
 </html>
+
+
