@@ -9,6 +9,20 @@
 </head>
 <body>
     <h1>班級管理系統載入中...</h1>
+    <!-- 右上角導航列 -->
+<nav>
+    <div><strong>班級管理系統</strong></div>
+    <div class="nav-buttons">
+        <button onclick="showPage('schedule')">課表</button>
+        <button onclick="showPage('seating')">座位表</button>
+        <button onclick="showPage('lottery')">抽籤</button>
+    </div>
+</nav>
+
+<!-- 頁面容器 (預設顯示課表 active-page) -->
+<div id="schedule" class="page active-page"><h2>週課表區塊</h2></div>
+<div id="seating" class="page"><h2>座位表區塊</h2></div>
+<div id="lottery" class="page"><h2>抽籤系統區塊</h2></div>
 
     <!-- 引入外部 JavaScript 腳本檔 -->
     <script src="main.js"></script>
