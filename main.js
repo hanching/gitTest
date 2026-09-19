@@ -7,11 +7,13 @@ function showPage(pageId) {
 }
 // 顯示教室位置與走法
 function showLocation(course, room, route) {
+    if (!course || !room) return;
     document.getElementById('modalCourse').innerText = course;
     document.getElementById('modalRoom').innerText = room;
     document.getElementById('modalRoute').innerText = route;
     document.getElementById('locationModal').style.display = 'flex';
 }
+
 
 // 關閉視窗
 function closeModal() {
@@ -60,4 +62,14 @@ function drawSingle() {
 
     const randomIndex = Math.floor(Math.random() * candidates.length);
     document.getElementById('resultSingle').innerText = '抽出號碼：' + candidates[randomIndex] + ' 號';
+}
+
+function drawMulti() {
+    alert('   ');
+    document.getElementById('resultMulti').innerText = ' ';
+}
+
+function drawSingle() {
+    alert('   ');
+    document.getElementById('resultSingle').innerText = ' ';
 }
