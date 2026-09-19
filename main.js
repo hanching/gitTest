@@ -63,13 +63,3 @@ function drawSingle() {
     const randomIndex = Math.floor(Math.random() * candidates.length);
     document.getElementById('resultSingle').innerText = '抽出號碼：' + candidates[randomIndex] + ' 號';
 }
-
-function drawMulti() {
-    alert('   ');
-    document.getElementById('resultMulti').innerText = ' ';
-}
-
-function drawSingle() {
-    alert('   ');
-    document.getElementById('resultSingle').innerText = ' ';
-}

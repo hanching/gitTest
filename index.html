@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>班級管理系統載入中...</h1>
     <!-- 右上角導航列 -->
 <nav>
     <div><strong>班級管理系統</strong></div>
@@ -140,7 +139,36 @@
         <button class="close-btn" onclick="closeModal()">關閉</button>
     </div>
 </div>
+<div id="lottery" class="page"><h2>數字抽籤系統</h2>
+<div class="card">
+    <div class="mode-select">
+        <label><input type="radio" name="drawMode" value="multi" checked onclick="switchDrawMode()"> 模式 A：指定抽籤人數</label>
+        <label><input type="radio" name="drawMode" value="single" onclick="switchDrawMode()"> 模式 B：指定座號收一個</label>
+    </div>
 
+    <!-- 模式 A：抽取指定人數 -->
+    <div id="panel-multi" class="draw-panel active">
+        <div class="input-group">
+            座號範圍：<input type="number" id="multiMin" value="1"> 到 <input type="number" id="multiMax" value="40"> 號
+        </div>
+        <div class="input-group">
+            抽取人數：<input type="number" id="multiCount" value="3"> 人
+        </div>
+        <button class="btn-draw" onclick="drawMulti()">開始抽籤</button>
+        <div id="resultMulti" class="result-box">?</div>
+    </div>
+
+    <!-- 模式 B：指定座號收一個 -->
+    <div id="panel-single" class="draw-panel">
+        <p style="font-size: 14px; color: #666; margin-bottom: 10px;">請輸入多個候選座號（用逗點隔開）：</p>
+        <div class="input-group">
+            <input type="text" id="singleCandidates" placeholder="例如: 3, 7, 15, 22" style="width: 80%;">
+        </div>
+        <button class="btn-draw" onclick="drawSingle()">隨機抽出一個</button>
+        <div id="resultSingle" class="result-box">?</div>
+    </div>
+</div>
+</div>
     <!-- 引入外部 JavaScript 腳本檔 -->
     <script src="main.js"></script>
 </body>
