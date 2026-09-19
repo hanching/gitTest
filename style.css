@@ -17,3 +17,10 @@ nav {
 /* 頁面切換機制 */
 .page { display: none; padding: 20px; max-width: 950px; margin: 0 auto; }
 .active-page { display: block; }
+
+table { width: 100%; border-collapse: collapse; margin-top: 15px; background: white; border-radius: 6px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+th, td { border: 1px solid #e0e0e0; padding: 10px; text-align: center; }
+th { background: #3498db; color: white; }
+.time-col { background: #f8f9fa; font-weight: bold; width: 135px; font-size: 13px; }
+.course-cell { cursor: pointer; transition: 0.2s; }
+.course-cell:hover { background: #e8f4fc; font-weight: bold; color: #2980b9; }
