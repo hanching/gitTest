@@ -1,0 +1,19 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
+body { padding-top: 60px; background: #f4f6f9; color: #333; }
+
+/* 右上角導航列 */
+nav {
+    position: fixed; top: 0; left: 0; right: 0; height: 50px;
+    background: #2c3e50; color: white; display: flex;
+    justify-content: space-between; align-items: center; padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15); z-index: 1000;
+}
+.nav-buttons button {
+    background: #34495e; color: white; border: none; padding: 8px 14px;
+    margin-left: 5px; cursor: pointer; border-radius: 4px; transition: 0.2s;
+}
+.nav-buttons button:hover { background: #1abc9c; }
+
+/* 頁面切換機制 */
+.page { display: none; padding: 20px; max-width: 950px; margin: 0 auto; }
+.active-page { display: block; }
